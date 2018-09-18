@@ -85,7 +85,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start Over"/>
                                 <connections>
-                                    <action selector="showAlert" destination="BYZ-38-t0r" eventType="touchUpInside" id="kuS-05-R3w"/>
+                                    <action selector="startNewGame" destination="BYZ-38-t0r" eventType="touchUpInside" id="I7u-fE-T0T"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYm-da-K2a">
@@ -110,6 +110,8 @@
                     <connections>
                         <outlet property="slider" destination="XKk-HT-v7x" id="YX1-ch-MPf"/>
                         <outlet property="targetLabel" destination="TBV-rw-ETG" id="d9u-b0-ptp"/>
+                        <outlet property="userRound" destination="s0P-8w-P2e" id="bwc-xJ-FXn"/>
+                        <outlet property="userScore" destination="AXT-bG-XTo" id="cRE-5w-4Gc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
