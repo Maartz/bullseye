@@ -24,35 +24,34 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		let roundedValue = slider.value.rounded()
 		currentValue = Int(roundedValue)
-		startNewRound()
+		startNewGame()
 		// Do any additional setup after loading the view, typically from a nib.
 	}
 	
 	@IBAction func showAlert(){
 		
 		
-		let difference = abs(targetValue - currentValue)
-		var points = 100 - difference
-		
-		score += points
-		
-		let title: String
-		
-		if difference == 0 {
-			title = "Perfect!"
-			points += 100
-		} else if difference < 5 {
-			title = "You almost had it!"
-			if difference == 1 {
-				points += 50
-			}
-		} else if difference < 10 {
-			title = "Pretty good!"
-		} else {
-			title = "Not even close..."
-		}
-		
-		let message = "You scored \(points) points"
+        let difference = abs(targetValue - currentValue)
+        var points = 100 - difference
+        
+        let title: String
+        if difference == 0 {
+            title = "Perfect!"
+            points += 100
+        } else if difference < 5 {
+            title = "You almost had it!"
+            if difference == 1 {
+                points += 50
+            }
+        } else if difference < 10 {
+            title = "Pretty good!"
+        } else {
+            title = "Not even close..."
+        }
+        
+        score += points
+        
+        let message = "You scored \(points) points"
 		// Create an alert pop up window
 		let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
 		// Create an alert button action
